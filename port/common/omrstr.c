@@ -3121,7 +3121,7 @@ convertPlatformToWide(struct OMRPortLibrary *portLibrary, charconvState_t encodi
 		} else if (E2BIG == errno) {
 			resultSize = (outBufferSize - wideBufferLimit); /* number of bytes written */
 		} else {
-			resultSize = OMRPORT_ERROR_STRING_ILLEGAL_STRING;
+			return OMRPORT_ERROR_STRING_ILLEGAL_STRING;
 		}
 	} else {
 		resultSize = (outBufferSize - wideBufferLimit); /* number of bytes written */
